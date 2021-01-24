@@ -3,7 +3,7 @@
 This repo contains our team's submission to the Huawei Challenge on Hack Cambridge 2021 Hackathon ([Problem statement](https://hackcambridge.com/dashboard/challenges)).
 
 ## Motive
-To utilize Huawei's Mindspore package for performing image classification on edge devices,i.e, minimal computation power.
+To utilize Huawei's Mindspore package for performing image classification on edge devices,i.e, devices with minimal computation power.
 
 ## What we used
 - CIFAR-10 dataset 
@@ -20,7 +20,15 @@ To utilize Huawei's Mindspore package for performing image classification on edg
     Driver code for training the model <br>
 - [eval.py](eval.py) <br>
     Evaluation script for evaluating an particular model checkpoint <br>
+    
+## Model Details
+Resnet-18 architecture model was trained using quantization aware method using Adam optimizer and SoftmaxCrossEntropyWithLogits loss function. The model was trained for a total of 40 epochs on a NVIDIA-1070 GPU using mindspore-ai backend. 
+    
+## Results
 
+| Model Architecture  | Accuracy |
+| ------------- | ------------- |
+| Resnet-18  | 87.86  |
 
 
 
