@@ -12,13 +12,13 @@ To utilize Huawei's Mindspore package for performing image classification on edg
 - Image preprocessing and parallelism achieved by Mindspore package
 
 ## Files description
-preprocess.py <br>
+- [preprocess.py](preprocess.py) <br>
     Applies image preprocessing operations from mindspore library <br>
-resnetv2.py <br>
+- [resnetv2.py](resnetv2.py) <br>
     Defines implementation of Resnet architecture <br>
-train.py <br>
+- [train.py](train.py) <br>
     Driver code for training the model <br>
-eval.py <br>
+- [eval.py](eval.py) <br>
     Evaluation script for evaluating an particular model checkpoint <br>
 
 
