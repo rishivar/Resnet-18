@@ -20,6 +20,8 @@ To utilize Huawei's Mindspore package for performing image classification on edg
     Driver code for training the model <br>
 - [eval.py](eval.py) <br>
     Evaluation script for evaluating an particular model checkpoint <br>
+- [checkpoint_40eps.ckpt](checkpoint_40eps.ckpt)<br>
+    Trained QAT-Resnet18 model. 
     
 ## Model Details
 - Resnet-18 architecture model was trained using Quantization-Aware-Training(QAT) method. 
