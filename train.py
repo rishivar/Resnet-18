@@ -104,9 +104,9 @@ class LossMonitor(Callback):
 
 
 ckpt_save_dir = args['savedir']
-#eval_per_epoch = 1
+eval_per_epoch = 1
 epoch_size = args['epoch']
-#epoch_per_eval = {"epoch": [], "acc": []}
+epoch_per_eval = {"epoch": [], "acc": []}
 
 
 
@@ -133,11 +133,10 @@ model = Model(quant, loss_fn=ls, optimizer=opt, metrics={'acc'})
 train = create_dataset()
 eval_data = create_dataset(training=False)
 
-#batch_num = train.get_dataset_size()
 loss_cb = LossMonitor()
 time = TimeMonitor()
 
-#eval_cb = EvalCallBack(model, eval_data, eval_per_epoch, epoch_per_eval)
+eval_cb = EvalCallBack(model, eval_data, eval_per_epoch, epoch_per_eval)
 config_ck = CheckpointConfig(save_checkpoint_steps=15625, keep_checkpoint_max=10)
 ckpoint_cb = ModelCheckpoint(prefix="train_resnet_cifar10", directory=ckpt_save_dir, config=config_ck)
 
