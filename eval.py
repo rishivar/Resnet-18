@@ -8,6 +8,12 @@ from mindspore import Model, context
 
 context.set_context(mode=context.PYNATIVE_MODE, device_target="GPU")
 
+import argparse
+ap = argparse.ArgumentParser()
+ap.add_argument("-loc", "--check_point", default = '/',
+   help="Model checkpoint file")
+
+args = vars(ap.parse_args())
 
 num_classes = 10
 lr = 0.01
@@ -21,7 +27,7 @@ opt = Adam(resnet.trainable_params(),lr, weight_decay)
 quantizer = QuantizationAwareTraining(bn_fold=False)
 quant = quantizer.quantize(resnet)
 
-load_checkpoint("./new_check/train_resnet_cifar10-41_10.ckpt", net=quant) # loading the custom trained checkpoint
+load_checkpoint(args['check_point'], net=quant) # loading the custom trained checkpoint
 
 eval_data = create_dataset(training = False) # define the test dataset
 
