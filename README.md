@@ -32,5 +32,7 @@ To utilize Huawei's Mindspore package for performing image classification on edg
 | ------------- | ------------- |
 | Resnet-18  | 87.86  |
 
+## Contribution
 
+- Submitted a pull request to Mindspore on implemented [Resnet-18 Architecture](https://gitee.com/mindspore/mindspore/pulls/11587)
 
