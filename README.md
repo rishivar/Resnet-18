@@ -55,6 +55,20 @@ optional arguments:
                         optimizer
 
 ```
+
+**Steps for evaulating the model:**
+```bash
+$python eval.py
+
+usage: eval.py [-h] [-loc CHECK_POINT]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -loc CHECK_POINT, --check_point CHECK_POINT
+                        Model checkpoint file
+
+
+```
     
 ## Results
 
