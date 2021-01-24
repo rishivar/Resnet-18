@@ -22,7 +22,7 @@ To utilize Huawei's Mindspore package for performing image classification on edg
     Evaluation script for evaluating an particular model checkpoint <br>
     
 ## Model Details
-Resnet-18 architecture model was trained using quantization aware method using Adam optimizer and SoftmaxCrossEntropyWithLogits loss function. The model was trained for a total of 40 epochs on a NVIDIA-1070 GPU using mindspore-ai backend. 
+Resnet-18 architecture model was trained using Quantization-Aware-Training(QAT) method. Adam optimizer and SoftmaxCrossEntropyWithLogits loss function were used. The model was trained for a total of 40 epochs on a NVIDIA-1070 GPU using mindspore-ai backend. 
     
 ## Results
 
